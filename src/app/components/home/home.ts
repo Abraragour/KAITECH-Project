@@ -45,6 +45,13 @@ export class HomeComponent implements OnInit {
       
       const desc = isAr ? 'حلول هندسية رائدة' : 'Leading construction solutions';
       this.metaService.updateTag({ name: 'description', content: desc });
+      setTimeout(() => {
+      const swiperEl = document.querySelector('swiper-container');
+      if (swiperEl && (swiperEl as any).swiper) {
+        (swiperEl as any).swiper.update();
+      }
+    }, 100);
+
     });
   }
 
