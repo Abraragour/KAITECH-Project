@@ -7,8 +7,7 @@ import { FooterComponent } from './components/footer/footer';
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    NavbarComponent,
-    FooterComponent
+    
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

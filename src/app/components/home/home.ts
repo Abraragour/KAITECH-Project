@@ -8,7 +8,6 @@ import { RouterLink } from '@angular/router';
 import { AboutComponent } from '../about/about';
 import { ServicesComponent } from '../services/services';
 import { ProjectsComponent } from '../projects/projects';
-import { ContactComponent } from '../contact/contact';
 
 register();
 
@@ -22,7 +21,7 @@ register();
     AboutComponent,    
     ServicesComponent, 
     ProjectsComponent, 
-    ContactComponent
+    
   ],
   templateUrl: './home.html',
   styleUrls: ['./home.css'],
