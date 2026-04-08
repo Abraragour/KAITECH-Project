@@ -1,0 +1,51 @@
+<section id="about" class="py-24 bg-white overflow-hidden" *transloco="let t">
+  <div class="container mx-auto px-8 md:px-16">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      
+      <div class="transition-all duration-1000 transform translate-x-0 opacity-100">
+        <h4 class="text-[#FF8C00] font-bold uppercase tracking-widest mb-4">
+          {{ t('aboutPage.title') }}
+        </h4>
+        <h2 class="text-4xl md:text-5xl font-black text-[#001030] mb-8 leading-tight">
+          {{ t('aboutPage.subtitle') }}
+        </h2>
+        <p class="text-gray-600 text-lg leading-relaxed mb-10">
+          {{ t('aboutPage.story') }}
+        </p>
+
+        <div class="grid gap-6">
+          <div *ngFor="let value of t('aboutPage.values')" class="flex gap-4 border-l-4 border-[#FF8C00] pl-4 rtl:border-l-0 rtl:border-r-4 rtl:pr-4">
+            <div>
+              <h5 class="font-bold text-[#001030]">{{ value.title }}</h5>
+              <p class="text-sm text-gray-500">{{ value.desc }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12">
+          <a [routerLink]="['/about-full']" 
+             class="inline-block border-2 border-[#001030] text-[#001030] px-8 py-3 font-bold uppercase hover:bg-[#001030] hover:text-white transition-all duration-300 no-underline">
+             {{ t('aboutPage.readMore') || 'Read More' }}
+          </a>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <img 
+          src="aboutt.jpeg" 
+          alt="Engineering" 
+          class="rounded-none shadow-2xl w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" 
+        />
+        <div class="absolute -bottom-8 -right-8 bg-[#FF8C00] p-8 hidden md:block shadow-xl rtl:right-auto rtl:-left-8">
+          <p class="text-4xl font-black text-[#001030]">
+            {{ t('aboutPage.experienceBox.number') }}
+          </p>
+          <p class="text-sm font-bold uppercase text-[#001030]">
+            {{ t('aboutPage.experienceBox.text') }}
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+@reference "../../../styles.css"; 
+
+.input-field {
+  @apply w-full bg-transparent border-b border-gray-600 py-3 text-white outline-none transition-all text-start;
+}
+
+.label-style {
+  @apply absolute left-0 top-3 text-gray-500 transition-all pointer-events-none uppercase tracking-widest font-bold;
+}
+
+.submit-btn {
+  @apply relative w-full bg-[#FF8C00] text-[#001030] py-5 font-black uppercase tracking-widest overflow-hidden transition-all duration-500 hover:bg-white active:scale-95 shadow-xl;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.max-h-\[90vh\]::-webkit-scrollbar {
+  width: 4px;
+}
+.max-h-\[90vh\]::-webkit-scrollbar-thumb {
+  background: #FF8C00;
+}

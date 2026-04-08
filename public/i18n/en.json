@@ -1,0 +1,112 @@
+{
+  "lang": "en",
+  "readMore": "Read More",
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": [
+    { "title": "Engineering Excellence", "desc": "Leading construction solutions in Egypt.", "img": "slide1.webp" },
+    { "title": "Building the Future", "desc": "Innovative engineering and quality.", "img": "slide2.webp" },
+    { "title": "Modern Infrastructure", "desc": "Highest safety and quality standards.", "img": "slide3.webp" }
+  ],
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Our Expertise",
+    "readMore": "Read More",
+    "items": [
+      { 
+        "id": "01", 
+        "title": "Technical Support",
+        "description": "We provide a comprehensive technical support system to ensure project efficiency, offering immediate solutions for complex engineering challenges."
+      },
+      { 
+        "id": "02", 
+        "title": "Security Systems",
+        "description": "We are committed to implementing the latest global safety standards in all facilities, ensuring the protection of personnel and the sustainability of assets."
+      },
+      { 
+        "id": "03", 
+        "title": "Fast Implementation",
+        "description": "We combine speed with precision, relying on strict timelines and modern project management techniques to guarantee delivery on time and with high quality."
+      }
+    ]
+  },
+  "aboutPage": {
+    "title": "About KAITECH",
+    "readMore": "Read More",
+    "subtitle": "Decades of Engineering Excellence",
+    "story": "A leading construction and engineering firm dedicated to delivering transformative projects that serve communities with the highest safety and quality standards.",
+    "values": [
+      { "title": "Quality", "desc": "We never compromise on execution quality." },
+      { "title": "Innovation", "desc": "Using the latest global engineering technologies." },
+      { "title": "Integrity", "desc": "Transparency is the core of our client relations." }
+    ],
+    "experienceBox": {
+      "number": "+10",
+      "text": "YEARS EXPERIENCE"
+    }
+  },
+"aboutFull": {
+  "heroTitle": "Architecting the Future",
+  "detailedStory1": "Founded on a legacy of precision and innovation, KAITECH has grown from a specialized engineering firm into a leader in integrated construction solutions. We don't just build structures; we create environments where businesses thrive and communities grow.",
+  "detailedStory2": "Our approach combines cutting-edge technology with sustainable practices, ensuring that every project we undertake—from luxury residential complexes to industrial hubs—stands as a testament to engineering excellence and long-term reliability.",
+  "teamTitle": "Our Leadership Team",
+  "teamSubtitle": "The Visionaries Behind Every Success",
+  "team": [
+    { 
+      "name": "Eng. Ahmed Hassan", 
+      "position": "Chief Executive Officer", 
+      "img": "person1.jpeg" 
+    },
+    { 
+      "name": "Eng. Sara Mahmoud", 
+      "position": "Principal Architect", 
+      "img": "person2.jpeg" 
+    },
+    { 
+      "name": "Eng. Mohamed Ali", 
+      "position": "Projects Director", 
+      "img": "person3.webp" 
+    }
+  ]
+},
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "Our Blueprint for the Future",
+    "filters": { "all": "All", "construction": "Construction", "infra": "Infrastructure", "energy": "Energy" },
+    "items": [
+      { "id": "1", "title": "Shorouk Housing Complex", "category": "construction", "img": "project1.jpg" },
+      { "id": "2", "title": "Wind Energy Station", "category": "energy", "img": "project2.jpg" },
+      { "id": "3", "title": "Cairo Water Network", "category": "infra", "img": "project3.jpg" }
+    ]
+  },
+  "projectDetails": {
+    "overview": "Project Overview",
+    "description": "The {{projectName}} project was executed with the highest global quality standards to ensure sustainability and efficiency."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "desc": "We are here to help you turn your engineering vision into reality.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message"
+    },
+    "info": {
+      "phone": "Call Us",
+      "email": "Email Us",
+      "address": "Location"
+    }
+  },
+  "footer": "© 2026 KAITECH Engineering. All Rights Reserved.",
+  "serviceDetails": {
+    "impactTitle": "SERVICE IMPACT",
+    "impactDesc": "We provide high-end solutions for {{serviceName}} tailored specifically for your engineering needs."
+  }
+}

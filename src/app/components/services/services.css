@@ -1,0 +1,67 @@
+.services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+}
+
+.service-card {
+    background-color: #001030 !important; 
+    padding: 50px 40px !important;
+    min-height: 380px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    transition: all 0.4s ease !important;
+    cursor: pointer !important;
+}
+
+.service-card:hover {
+    background-color: #001a4d !important;
+    transform: translateY(-10px) !important;
+}
+
+.service-title {
+    color: white !important;
+    font-size: 26px !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    font-style: italic !important;
+    margin-bottom: 20px !important;
+}
+
+.read-more-btn {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    color: #FF8C00 !important;
+    font-weight: 900 !important;
+    font-size: 11px !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase !important;
+}
+
+.service-card:hover .read-more-btn svg {
+    transform: translateX(8px);
+    transition: 0.3s;
+}
+
+.icon-container { 
+    color: #FF8C00 !important; 
+    margin-bottom: 30px !important;
+}
+
+.bg-number {
+    position: absolute !important;
+    bottom: -15px !important;
+    right: 10px !important;
+    font-size: 110px !important;
+    font-weight: 900 !important;
+    color: rgba(255, 255, 255, 0.04) !important;
+    z-index: 0 !important;
+}
+
+@media (max-width: 992px) {
+    .services-grid { grid-template-columns: 1fr !important; }
+}

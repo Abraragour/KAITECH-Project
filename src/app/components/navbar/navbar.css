@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+.nav-link {
+  @apply text-white hover:text-[#FF8C00] transition-colors duration-300 font-medium cursor-pointer;
+}
+.nav-link.active {
+  @apply text-[#FF8C00];
+}

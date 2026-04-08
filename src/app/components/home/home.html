@@ -1,0 +1,59 @@
+
+
+<section id="home" class="h-screen w-full relative overflow-hidden bg-[#001030]">
+  <ng-container *ngIf="('hero' | transloco) as slides">
+<swiper-container 
+  [attr.dir]="translocoService.getActiveLang() === 'ar' ? 'rtl' : 'ltr'"
+  [attr.key]="translocoService.getActiveLang()"
+  navigation="true" 
+  pagination="true"
+  effect="fade" 
+  [attr.speed]="500" 
+  [attr.autoplay-delay]="5000"
+  class="h-full w-full"
+  loop="true"
+  class="h-full w-full"
+  [injectStyles]="[
+    '.swiper-button-next, .swiper-button-prev { z-index: 999 !important; color: #FF8C00 !important; pointer-events: auto !important; }',
+    '[dir=\'ltr\'] .swiper-button-next { right: 20px !important; left: auto !important; }',
+    '[dir=\'ltr\'] .swiper-button-prev { left: 20px !important; right: auto !important; }',
+    '[dir=\'rtl\'] .swiper-button-next { left: 20px !important; right: auto !important; transform: scaleX(-1) !important; }',
+    '[dir=\'rtl\'] .swiper-button-prev { right: 20px !important; left: auto !important; transform: scaleX(-1) !important; }',
+  ]">
+
+
+
+
+<div *ngFor="let item of $any('projects.items' | transloco) || []"></div>
+
+      <swiper-slide *ngFor="let slide of $any(slides)">
+        <div class="relative h-full w-full flex items-center">
+          <div class="absolute inset-0 bg-cover bg-center animate-slow-zoom"
+               [style.backgroundImage]="'url(' + slide.img + ')'">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#001030] via-[#001030]/80 to-transparent"></div>
+          </div>
+
+          <div class="container mx-auto px-8 md:px-16 z-10">
+            <div class="max-w-4xl border-l-8 border-[#FF8C00] pl-8 md:pl-12 rtl:border-l-0 rtl:border-r-8 rtl:pr-8 rtl:md:pr-12 text-left rtl:text-right">
+              <h1 class="text-5xl md:text-8xl font-black text-white mb-6 uppercase tracking-tighter">
+                {{ slide.title }}
+              </h1>
+              <p class="text-xl md:text-2xl text-gray-200 mb-12 font-light max-w-xl">
+                {{ slide.desc }}
+              </p>
+<a [routerLink]="['/contact']"
+   class="inline-block bg-[#FF8C00] text-[#001030] px-12 py-4 font-black uppercase hover:bg-white transition-all duration-300 cursor-pointer relative z-50 text-center no-underline">
+  {{ 'nav.contact' | transloco }}
+</a>
+
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </ng-container>
+</section>
+
+<app-about id="about"></app-about>
+<app-services id="services"></app-services>
+<app-projects id="projects"></app-projects>
