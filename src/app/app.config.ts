@@ -11,14 +11,14 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     provideRouter(routes,
       withInMemoryScrolling({ 
-        anchorScrolling: 'enabled', // 👈 دي اللي بتخلي الـ #projects تشتغل
+        anchorScrolling: 'enabled', 
         scrollPositionRestoration: 'enabled' 
       })
     ),
     provideTransloco({
       config: {
         availableLangs: ['ar', 'en'],
-        defaultLang: 'ar', // ✅ تم تصحيح القوس هنا
+        defaultLang: 'en', 
         reRenderOnLangChange: true,
         prodMode: !isDevMode(),
       },
