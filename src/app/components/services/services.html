@@ -11,21 +11,23 @@
     </div>
 
     <div class="services-grid">
-     <div *ngFor="let ser of t('services.items', { read: 'true' })" class="service-card group">
+      <div *ngFor="let ser of t('services.items', { read: 'true' })" 
+           [routerLink]="['/service', ser.id?.toString()]" 
+           class="service-card group cursor-pointer">
     
-    <div class="rtl:text-right">
-        <h3 class="service-title">{{ ser.title }}</h3>
-        
-        <div [routerLink]="['/service', ser.id?.toString()]" class="read-more-btn cursor-pointer">
-            {{ t('services.readMore') }} 
-            <svg class="rtl:rotate-180" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-            </svg>
+        <div class="rtl:text-right">
+            <h3 class="service-title">{{ ser.title }}</h3>
+            
+            <div class="read-more-btn">
+                {{ t('services.readMore') }} 
+                <svg class="rtl:rotate-180" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                </svg>
+            </div>
         </div>
-    </div>
 
-    <span class="bg-number">{{ ser.id }}</span>
-</div>
+        <span class="bg-number">{{ ser.id }}</span>
+      </div>
     </div>
   </div>
 </section>
