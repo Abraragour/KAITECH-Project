@@ -1,40 +1,40 @@
-@reference "../../../styles.css";
-
-.nav-link {
-  @apply relative text-[11px] uppercase tracking-[0.2em] font-black cursor-pointer inline-block;
-  transition: color 0.5s ease;
+::ng-deep swiper-container {
+  --swiper-pagination-color: #14b8a6 !important;
+  --swiper-pagination-bullet-inactive-color: #94a3b8 !important;
+  --swiper-pagination-bullet-inactive-opacity: 0.5 !important;
+  --swiper-pagination-bullet-size: 8px !important;
+  --swiper-pagination-bottom: 40px !important;
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 50%;
-  width: 0; 
-  height: 2px;
-  background-color: #14b8a6;
-  transform: translateX(-50%);
-  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
-  pointer-events: none;
+.animate-slow-zoom {
+  animation: slowZoom 20s linear infinite alternate;
 }
 
-د.nav-link:hover {
-  @apply text-[#14b8a6];
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
 }
 
-.nav-link.active-link {
-  @apply text-[#14b8a6];
+.animate-fadeInUp { 
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards; 
 }
 
-.nav-link.active-link::after {
-  width: 70%;
+.animate-fadeInDown { 
+  animation: fadeInDown 0.6s ease-out forwards; 
 }
 
-
-.btn-lang lucide-icon {
-  @apply transition-transform duration-1000 ease-in-out;
+@keyframes fadeInUp { 
+  from { opacity: 0; transform: translateY(40px); } 
+  to { opacity: 1; transform: translateY(0); } 
 }
 
-nav, nav img, nav a, nav button, nav span {
-  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+@keyframes fadeInDown { 
+  from { opacity: 0; transform: translateY(-20px); } 
+  to { opacity: 1; transform: translateY(0); } 
+}
+
+.delay-200 { animation-delay: 0.2s; }
+
+swiper-slide {
+  background-color: #f8fafc;
 }
