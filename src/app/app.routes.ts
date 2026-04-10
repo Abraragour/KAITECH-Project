@@ -11,13 +11,32 @@ export const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      { path: 'about-full', component: AboutFullComponent }, 
-      { path: '', component: HomeComponent },
-      { path: 'service/:id', component: ServiceDetailsComponent },
-      { path: 'project/:id', component: ProjectDetailsComponent },
-      { path: 'contact', component: ContactComponent }
+      { 
+        path: 'about-full', 
+        component: AboutFullComponent, 
+        title: 'KAITECH | About' 
+      }, 
+      { 
+        path: '', 
+        component: HomeComponent, 
+        title: 'KAITECH | Home' 
+      },
+      { 
+        path: 'service/:id', 
+        component: ServiceDetailsComponent, 
+        title: 'KAITECH | Service' 
+      },
+      { 
+        path: 'project/:id', 
+        component: ProjectDetailsComponent, 
+        title: 'KAITECH | Project' 
+      },
+      { 
+        path: 'contact', 
+        component: ContactComponent, 
+        title: 'KAITECH | Contact' 
+      }
     ]
   },
-  
   { path: '**', redirectTo: '' }
 ];
