@@ -12,11 +12,16 @@
 
 @keyframes slowZoom {
   from { transform: scale(1); }
-  to { transform: scale(1.1); }
+  to { transform: scale(1.15); }
 }
 
-.animate-fadeInUp { animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
-.animate-fadeInDown { animation: fadeInDown 0.6s ease-out forwards; }
+.animate-fadeInUp { 
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards; 
+}
+
+.animate-fadeInDown { 
+  animation: fadeInDown 0.6s ease-out forwards; 
+}
 
 @keyframes fadeInUp { 
   from { opacity: 0; transform: translateY(40px); } 
@@ -29,3 +34,7 @@
 }
 
 .delay-200 { animation-delay: 0.2s; }
+
+swiper-slide {
+  background-color: #f8fafc;
+}
