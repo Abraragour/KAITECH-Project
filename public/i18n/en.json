@@ -158,20 +158,24 @@
   "overview": "Project Overview",
   "description": "The {{projectName}} project was executed using advanced BIM methodology. We developed high-fidelity digital models (LOD 400/500) to ensure seamless coordination between architectural, structural, and MEP disciplines, significantly accelerating the construction timeline and optimizing operational costs."
 },
-  "contact": {
+"contact": {
     "title": "Contact Us",
-    "desc": "We are here to help you turn your engineering vision into reality.",
+    "desc": "We are here to help you turn your engineering vision into a digital reality.",
     "form": {
-      "name": "Name",
-      "email": "Email",
+      "name": "Full Name",
+      "email": "Email Address",
       "subject": "Subject",
       "message": "Message",
       "send": "Send Message"
     },
     "info": {
       "phone": "Call Us",
+      "phone_egypt": "+20 100 236 4467",
+      "phone_ksa": "+966 56 130 0817",
       "email": "Email Us",
-      "address": "Location"
+      "email_val": "info@kaitech-eg.com",
+      "address": "Location",
+      "address_val": "Cairo, Egypt"
     }
   },
   "footer": "© 2026 KAITECH Engineering. All Rights Reserved.",

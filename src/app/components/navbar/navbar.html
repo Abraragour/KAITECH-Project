@@ -14,21 +14,21 @@
       </a>
     </div>
 
-    <div class="flex items-center gap-12">
-      <ul class="hidden md:flex items-center gap-2">
+    <div class="flex items-center gap-8 md:gap-12">
+      <ul class="hidden md:flex items-center gap-6">
         <li *ngFor="let link of ['home', 'about', 'services', 'projects', 'contact']">
           <a [routerLink]="link === 'contact' ? ['/contact'] : ['/']" 
              [fragment]="link === 'contact' ? undefined : link"
              routerLinkActive="active-link"
              [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', matrixParams: 'ignored', fragment: 'exact' }"
-             class="nav-link px-5 py-1.5 transition-all duration-700"
+             class="nav-link px-2 py-1.5 transition-all duration-700 text-[16px] md:text-[18px]"
              [ngClass]="(isScrolled || isContactActive) ? 'text-white' : 'text-[#1e293b]'">
             {{ 'nav.' + link | transloco }}
           </a>
         </li>
       </ul>
 
-      <div class="flex items-center gap-6 border-l pl-8 ml-2 rtl:border-l-0 rtl:border-r rtl:pl-0 rtl:pr-8"
+      <div class="flex items-center gap-4 border-l pl-8 ml-2 rtl:border-l-0 rtl:border-r rtl:pl-0 rtl:pr-8"
            [ngClass]="(isScrolled || isContactActive) ? 'border-white/10' : 'border-black/10'">
         
         <button (click)="toggleLanguage()" 
@@ -37,8 +37,8 @@
           
           <lucide-icon [img]="GlobeIcon" class="w-3.5 h-3.5 transition-transform duration-1000 group-hover:rotate-[360deg]"></lucide-icon>
           
-          <span class="font-black uppercase tracking-[0.2em] text-[10px]">
-            {{ currentLang === 'ar' ? 'English' : 'عربي' }}
+          <span class="font-black uppercase tracking-[0.1em] text-[13px]">
+            {{ currentLang === 'ar' ? 'EN' : 'عربي' }}
           </span>
         </button>
 

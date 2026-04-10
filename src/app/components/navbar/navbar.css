@@ -1,7 +1,6 @@
-@reference "../../../styles.css";
 
 .nav-link {
-  @apply relative text-[11px] uppercase tracking-[0.2em] font-black cursor-pointer inline-block;
+  @apply relative text-[16px] uppercase tracking-[0.2em] font-black cursor-pointer inline-block;
   transition: color 0.5s ease;
 }
 
@@ -18,7 +17,7 @@
   pointer-events: none;
 }
 
-د.nav-link:hover {
+.nav-link:hover {
   @apply text-[#14b8a6];
 }
 
