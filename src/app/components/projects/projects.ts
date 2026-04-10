@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
 import { take } from 'rxjs';
 import { RouterModule } from '@angular/router'; 
+
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -12,6 +13,7 @@ import { RouterModule } from '@angular/router';
 })
 export class ProjectsComponent implements OnInit {
   currentFilter: string = 'all';
+  visibleProjectsCount: number = 6; 
 
   constructor(
     private transloco: TranslocoService,
@@ -20,10 +22,14 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit() {
     this.currentFilter = 'all';
-    
     this.transloco.selectTranslation().pipe(take(1)).subscribe(() => {
       this.cdr.detectChanges();
     });
+  }
+
+  showMore() {
+    this.visibleProjectsCount += 4;
+    this.cdr.detectChanges();
   }
 
   get filters() {
@@ -39,15 +45,29 @@ export class ProjectsComponent implements OnInit {
       return [];
     }
 
-    if (this.currentFilter === 'all') {
-      return allProjects;
+    let filtered = allProjects;
+    if (this.currentFilter !== 'all') {
+      filtered = allProjects.filter((item: any) => item.category === this.currentFilter);
     }
     
-    return allProjects.filter((item: any) => item.category === this.currentFilter);
+    return filtered.slice(0, this.visibleProjectsCount);
+  }
+
+  get hasMoreProjects(): boolean {
+    const allProjects = this.transloco.translateObject('projects.items');
+    if (!allProjects || !Array.isArray(allProjects)) return false;
+    
+    let totalInCurrentFilter = allProjects.length;
+    if (this.currentFilter !== 'all') {
+      totalInCurrentFilter = allProjects.filter((item: any) => item.category === this.currentFilter).length;
+    }
+    
+    return this.visibleProjectsCount < totalInCurrentFilter;
   }
 
   setFilter(category: any) {
     this.currentFilter = String(category);
+    this.visibleProjectsCount = 6; 
     this.cdr.detectChanges(); 
   }
 

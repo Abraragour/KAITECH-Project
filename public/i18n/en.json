@@ -30,39 +30,55 @@
 ],
  "services": {
   "title": "Our Services",
+  "readMore": "View More Services",
   "subtitle": "Integrated Digital Solutions for the Construction Industry",
-  "readMore": "Read More",
   "items": [
     {
       "id": "01",
-      "title": "Engineering Design Services",
-      "description": "Comprehensive design solutions (Architectural, Structural, and MEP) fully adopted within a BIM-based environment to ensure maximum precision and clash-free coordination."
+      "title": "Engineering Design Consultancy",
+      "description": "Integrated design solutions (Architectural, Structural, MEP) fully based on BIM environments to ensure the highest levels of accuracy, coordination, and clash avoidance."
     },
     {
       "id": "02",
-      "title": "BIM & VDC Consultation",
-      "description": "Managing and coordinating Building Information Models and facilitating digital delivery for complex projects, ensuring quality compliance with international standards."
+      "title": "BIM & VDC Services",
+      "description": "Management and coordination of Building Information Models, facilitating digital delivery for complex projects while ensuring quality according to international standards."
     },
     {
       "id": "03",
       "title": "Enterprise Software Development",
-      "description": "Designing and developing custom software solutions for the construction sector to automate workflows and enhance productivity using cutting-edge technologies."
+      "description": "Designing and developing custom software solutions for the construction sector that help automate workflows and improve productivity using the latest technologies."
     },
     {
       "id": "04",
-      "title": "KAI-INSIGHT (Construction Intelligence)",
-      "description": "Our innovative system for project data analysis, providing real-time dashboards to monitor progress, performance, and resource allocation efficiently."
+      "title": "Construction Intelligence (KAI-INSIGHT)",
+      "description": "Our innovative system for project data analysis, providing real-time dashboards to monitor progress and resources with high efficiency."
     },
     {
       "id": "05",
       "title": "Digital Twin Solutions",
-      "description": "Creating living digital replicas of physical assets, empowering owners to manage and operate facilities intelligently while reducing long-term operational costs."
+      "description": "Creating live digital copies of facilities that allow owners to manage assets and operate facilities intelligently, reducing long-term operational costs."
     },
     {
       "id": "06",
-      "title": "GIS & Infrastructure Services",
-      "description": "Providing advanced Geographic Information System solutions, smart infrastructure network design, and landscape coordination for large-scale developments."
+      "title": "GIS & Infrastructure Consultancy",
+      "description": "Providing advanced geographical mapping solutions, smart infrastructure network design, and landscape coordination for major projects."
+    },
+    {
+      "id": "07",
+      "title": "Smart Asset Management",
+      "description": "Linking BIM data with facility management systems to optimize the building's lifecycle and ensure proactive maintenance with efficiency and reliability."
+    },
+    {
+      "id": "08",
+      "title": "Engineering Process Automation",
+      "description": "Developing custom software tools (Plugins) for engineering programs to reduce human error and accelerate repetitive routine tasks."
+    },
+    {
+      "id": "09",
+      "title": "Digital Training & Development",
+      "description": "Qualifying engineering teams and training them on the latest digital transformation techniques, BIM tools, and teamwork in cloud environments."
     }
+
   ]
 },
  "aboutPage": {
@@ -117,56 +133,31 @@
 },
  "projects": {
   "title": "Our Projects",
-  "subtitle": "A Proven Track Record of Excellence",
+  "subtitle": "A Proven Track Record of Digital Excellence",
+  "readMore": "View More Projects",
   "filters": { 
     "all": "All", 
     "healthcare": "Healthcare", 
-    "commercial": "Commercial", 
+    "commercial": "Commercial & Admin", 
     "industrial": "Industrial" 
   },
   "items": [
-    { 
-      "id": "1", 
-      "title": "EIPICO 3 Pharma Factory", 
-      "category": "healthcare", 
-      "img": "project1.jpg" 
-    },
-    { 
-      "id": "2", 
-      "title": "The Point Tower - KSA", 
-      "category": "commercial", 
-      "img": "project2.jpg" 
-    },
-    { 
-      "id": "3", 
-      "title": "Marakez Head Office", 
-      "category": "commercial", 
-      "img": "project3.jpg" 
-    },
-    { 
-      "id": "4", 
-      "title": "Tabarak Children's Hospital", 
-      "category": "healthcare", 
-      "img": "slide1.webp" 
-    },
-    { 
-      "id": "5", 
-      "title": "South Helwan Power Plant", 
-      "category": "industrial", 
-      "img": "slide2.jpg" 
-    },
-    { 
-      "id": "6", 
-      "title": "O-West Business Hub", 
-      "category": "commercial", 
-      "img": "slide3.jpg" 
-    }
+    { "id": "1", "title": "EIPICO 3 Pharma Factory", "category": "healthcare", "img": "project1.jpg" },
+    { "id": "2", "title": "The Point Tower - KSA", "category": "commercial", "img": "project2.jpg" },
+    { "id": "3", "title": "Marakez Head Office", "category": "commercial", "img": "project3.jpg" },
+    { "id": "4", "title": "Tabarak Children's Hospital", "category": "healthcare", "img": "slide1.webp" },
+    { "id": "5", "title": "South Helwan Power Plant", "category": "industrial", "img": "slide2.jpg" },
+    { "id": "6", "title": "O-West Business Hub", "category": "commercial", "img": "slide3.jpg" },
+    { "id": "7", "title": "New Banha University Hospital", "category": "healthcare", "img": "project2.jpg" },
+    { "id": "8", "title": "Swan Lake Compound", "category": "commercial", "img": "project1.jpg" },
+    { "id": "9", "title": "MAG Building - Heliopolis", "category": "commercial", "img": "project3.jpg" },
+    { "id": "10", "title": "Cairo District Cooling Plant", "category": "industrial", "img": "slide3.jpg" }
   ]
 },
-  "projectDetails": {
-    "overview": "Project Overview",
-    "description": "The {{projectName}} project was executed with the highest global quality standards to ensure sustainability and efficiency."
-  },
+ "projectDetails": {
+  "overview": "Project Overview",
+  "description": "The {{projectName}} project was executed using advanced BIM methodology. We developed high-fidelity digital models (LOD 400/500) to ensure seamless coordination between architectural, structural, and MEP disciplines, significantly accelerating the construction timeline and optimizing operational costs."
+},
   "contact": {
     "title": "Contact Us",
     "desc": "We are here to help you turn your engineering vision into reality.",
