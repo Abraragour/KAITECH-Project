@@ -4,9 +4,9 @@ import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
   selector: 'app-about-full',
-  standalone: true, // 👈 مهم جداً
-  imports: [CommonModule, TranslocoModule], // 👈 عشان الـ HTML يشتغل
+  standalone: true, 
+  imports: [CommonModule, TranslocoModule], 
   templateUrl: './about-full.html',
   styleUrl: './about-full.css',
 })
-export class AboutFullComponent { } // 👈 خلي الاسم كدة
+export class AboutFullComponent { } 

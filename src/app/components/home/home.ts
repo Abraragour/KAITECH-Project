@@ -1,10 +1,9 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit, Input } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { register } from 'swiper/element/bundle';
 import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
 import { Title, Meta } from '@angular/platform-browser';
-import { Router } from '@angular/router'; 
-import { RouterLink } from '@angular/router'; 
+import { Router, RouterLink } from '@angular/router'; 
 import { AboutComponent } from '../about/about';
 import { ServicesComponent } from '../services/services';
 import { ProjectsComponent } from '../projects/projects';
@@ -21,7 +20,6 @@ register();
     AboutComponent,    
     ServicesComponent, 
     ProjectsComponent, 
-    
   ],
   templateUrl: './home.html',
   styleUrls: ['./home.css'],
@@ -29,6 +27,8 @@ register();
 })
 export class HomeComponent implements OnInit {
   
+  @ViewChild('swiperEl') swiperEl!: ElementRef;
+
   @Input() contactComponent!: any;
 
   constructor(
@@ -45,14 +45,28 @@ export class HomeComponent implements OnInit {
       
       const desc = isAr ? 'حلول هندسية رائدة' : 'Leading construction solutions';
       this.metaService.updateTag({ name: 'description', content: desc });
+      
       setTimeout(() => {
-      const swiperEl = document.querySelector('swiper-container');
-      if (swiperEl && (swiperEl as any).swiper) {
-        (swiperEl as any).swiper.update();
-      }
-    }, 100);
-
+        const swiper = this.swiperEl?.nativeElement?.swiper;
+        if (swiper) {
+          swiper.update();
+        }
+      }, 100);
     });
+  }
+
+nextSlide() {
+    const swiper = this.swiperEl?.nativeElement?.swiper;
+    if (swiper) {
+      swiper.slideNext(500); 
+    }
+  }
+
+  prevSlide() {
+    const swiper = this.swiperEl?.nativeElement?.swiper;
+    if (swiper) {
+      swiper.slidePrev(500);
+    }
   }
 
   openContactModal() {

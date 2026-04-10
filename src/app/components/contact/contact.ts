@@ -1,7 +1,7 @@
 import { Component,Input,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslocoModule } from '@ngneat/transloco';
-import { RouterLink } from '@angular/router'; // 
+import { RouterLink } from '@angular/router'; 
 @Component({
   selector: 'app-contact',
   standalone: true,

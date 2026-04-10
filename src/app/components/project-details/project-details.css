@@ -1,0 +1,16 @@
+.project-card {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.project-card img {
+    will-change: transform;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.grid {
+    transition: all 0.5s ease-in-out;
+}

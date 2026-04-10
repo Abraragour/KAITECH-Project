@@ -3,6 +3,30 @@
   min-height: 100vh;
 }
 
+.project-card {
+  border-radius: 32px !important;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+}
+
+.project-card:hover {
+  box-shadow: 0 40px 80px rgba(30, 41, 59, 0.15) !important;
+}
+
 img {
-  content-visibility: auto; 
+  content-visibility: auto;
+  will-change: transform, opacity;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
 }

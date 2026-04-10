@@ -11,5 +11,4 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./about.css']
 })
 export class AboutComponent {
-  // الداتا هتيجي من الـ JSON مباشرة
 }

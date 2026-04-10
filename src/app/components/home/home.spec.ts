@@ -14,7 +14,7 @@ describe('Home', () => {
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
 
-    fixture.detectChanges(); // ✅ مهم جدًا
+    fixture.detectChanges(); 
     await fixture.whenStable();
   });
 

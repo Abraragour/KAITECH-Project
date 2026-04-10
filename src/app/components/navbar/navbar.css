@@ -1,8 +1,40 @@
-@import "tailwindcss";
+@reference "../../../styles.css";
 
 .nav-link {
-  @apply text-white hover:text-[#FF8C00] transition-colors duration-300 font-medium cursor-pointer;
+  @apply relative text-[11px] uppercase tracking-[0.2em] font-black cursor-pointer inline-block;
+  transition: color 0.5s ease;
 }
-.nav-link.active {
-  @apply text-[#FF8C00];
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0; 
+  height: 2px;
+  background-color: #14b8a6;
+  transform: translateX(-50%);
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+د.nav-link:hover {
+  @apply text-[#14b8a6];
+}
+
+.nav-link.active-link {
+  @apply text-[#14b8a6];
+}
+
+.nav-link.active-link::after {
+  width: 70%;
+}
+
+
+.btn-lang lucide-icon {
+  @apply transition-transform duration-1000 ease-in-out;
+}
+
+nav, nav img, nav a, nav button, nav span {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }

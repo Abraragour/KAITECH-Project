@@ -1,0 +1,29 @@
+/* ظهور تدريجي */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* تمدد الخط */
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 96px; }
+}
+
+/* دخول من اليمين */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fadeIn { animation: fadeIn 0.8s ease-out forwards; }
+.animate-expandWidth { animation: expandWidth 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.animate-slideInRight { animation: slideInRight 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+
+.delay-300 { animation-delay: 0.3s; }
+
+h1:hover ~ span {
+    transform: scale(1.05);
+    color: #f1f5f9;
+    transition: all 0.5s ease;
+}

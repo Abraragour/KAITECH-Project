@@ -10,30 +10,45 @@
   },
   "hero": [
     { "title": "Engineering Excellence", "desc": "Leading construction solutions in Egypt.", "img": "slide1.webp" },
-    { "title": "Building the Future", "desc": "Innovative engineering and quality.", "img": "slide2.webp" },
-    { "title": "Modern Infrastructure", "desc": "Highest safety and quality standards.", "img": "slide3.webp" }
+    { "title": "Building the Future", "desc": "Innovative engineering and quality.", "img": "slide2.jpg" },
+    { "title": "Modern Infrastructure", "desc": "Highest safety and quality standards.", "img": "slide3.jpg" }
   ],
   "services": {
     "title": "Our Services",
     "subtitle": "Our Expertise",
     "readMore": "Read More",
     "items": [
-      { 
-        "id": "01", 
-        "title": "Technical Support",
-        "description": "We provide a comprehensive technical support system to ensure project efficiency, offering immediate solutions for complex engineering challenges."
-      },
-      { 
-        "id": "02", 
-        "title": "Security Systems",
-        "description": "We are committed to implementing the latest global safety standards in all facilities, ensuring the protection of personnel and the sustainability of assets."
-      },
-      { 
-        "id": "03", 
-        "title": "Fast Implementation",
-        "description": "We combine speed with precision, relying on strict timelines and modern project management techniques to guarantee delivery on time and with high quality."
-      }
-    ]
+  { 
+    "id": "01", 
+    "title": "Technical Support",
+    "description": "We provide a comprehensive technical support system..."
+  },
+  { 
+    "id": "02", 
+    "title": "Security Systems",
+    "description": "We are committed to implementing the latest safety standards..."
+  },
+  { 
+    "id": "03", 
+    "title": "Fast Implementation",
+    "description": "We combine speed with precision to guarantee delivery on time."
+  },
+  { 
+    "id": "04", 
+    "title": "Architecture",
+    "description": "Innovative architectural designs tailored to modern needs."
+  },
+  { 
+    "id": "05", 
+    "title": "Consultation",
+    "description": "Professional engineering consultations for your projects."
+  },
+  { 
+    "id": "06", 
+    "title": "Electric Works",
+    "description": "High-quality electrical infrastructure and solutions."
+  }
+]
   },
   "aboutPage": {
     "title": "About KAITECH",

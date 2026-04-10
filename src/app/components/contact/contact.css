@@ -1,29 +1,31 @@
-@reference "../../../styles.css"; 
+@import "tailwindcss";
 
-.input-field {
-  @apply w-full bg-transparent border-b border-gray-600 py-3 text-white outline-none transition-all text-start;
-}
-
-.label-style {
-  @apply absolute left-0 top-3 text-gray-500 transition-all pointer-events-none uppercase tracking-widest font-bold;
+.contact-input {
+  @apply w-full bg-transparent border-b-2 border-white/[0.1] py-5 text-white text-xl font-bold outline-none transition-all focus:border-[#14b8a6];
 }
 
-.submit-btn {
-  @apply relative w-full bg-[#FF8C00] text-[#001030] py-5 font-black uppercase tracking-widest overflow-hidden transition-all duration-500 hover:bg-white active:scale-95 shadow-xl;
+.contact-label {
+  @apply absolute left-0 rtl:right-0 top-5 text-slate-400 transition-all pointer-events-none uppercase text-[10px] tracking-[0.4em] font-black;
 }
 
-@keyframes slideUp {
-  from { transform: translateY(50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+.contact-input:focus ~ .contact-label,
+.contact-input:not(:placeholder-shown) ~ .contact-label {
+  @apply -top-6 text-[#14b8a6] text-[8px] tracking-[0.6em];
 }
 
-.animate-slide-up {
-  animation: slideUp 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+.input-animated-line {
+  @apply absolute bottom-0 left-0 w-0 h-[2px] bg-[#14b8a6] transition-all duration-700 group-hover/input:w-full;
 }
 
-.max-h-\[90vh\]::-webkit-scrollbar {
-  width: 4px;
-}
-.max-h-\[90vh\]::-webkit-scrollbar-thumb {
-  background: #FF8C00;
-}
+@keyframes slowSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes slowReverseSpin { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+.animate-slow-spin { animation: slowSpin 60s linear infinite; }
+.animate-slow-reverse-spin { animation: slowReverseSpin 80s linear infinite; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-40px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fadeInUp { animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+.animate-fadeInDown { animation: fadeInDown 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+.delay-300 { animation-delay: 0.3s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-700 { animation-delay: 0.7s; }
+.fill-both { animation-fill-mode: both; }

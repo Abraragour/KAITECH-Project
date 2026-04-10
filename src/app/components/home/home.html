@@ -1,59 +1,46 @@
-
-
-<section id="home" class="h-screen w-full relative overflow-hidden bg-[#001030]">
+<section id="home" class="h-screen w-full relative overflow-hidden bg-white">
   <ng-container *ngIf="('hero' | transloco) as slides">
-<swiper-container 
-  dir="ltr" 
-  navigation="true" 
-  pagination="true"
-  observer="true"
-  observe-parents="true"
-  effect="fade" 
-  speed="500" 
-  autoplay-delay="5000"
-  loop="true"
-  class="h-full w-full"
-  [injectStyles]="[
-    '.swiper-button-next, .swiper-button-prev { z-index: 999 !important; color: #FF8C00 !important; pointer-events: auto !important; }',
-    '.swiper-button-next { right: 20px !important; left: auto !important; }',
-    '.swiper-button-prev { left: 20px !important; right: auto !important; }'
-  ]">
+    <swiper-container #swiperEl 
+                      dir="ltr" 
+                      navigation="false" 
+                      pagination="true" 
+                      effect="fade" 
+                      speed="1200" 
+                      autoplay-delay="5000" 
+                      loop="true" 
+                      class="h-full w-full">
 
-  <swiper-slide *ngFor="let slide of $any(slides)">
-    <div class="relative h-full w-full flex items-center">
-      <div class="absolute inset-0 bg-cover bg-center animate-slow-zoom"
-           [style.backgroundImage]="'url(' + slide.img + ')'">
-        <div class="absolute inset-0 bg-gradient-to-r from-[#001030] via-[#001030]/80 to-transparent"></div>
-      </div>
+      <swiper-slide *ngFor="let slide of $any(slides)">
+        <div class="relative h-full w-full flex items-center">
+          
+          <div class="absolute inset-0 bg-cover bg-center animate-slow-zoom pointer-events-none" 
+               [style.backgroundImage]="'url(' + slide.img + ')'">
+            <div class="absolute inset-0 bg-white/20"></div>
+          </div>
 
-     <div class="container mx-auto px-8 md:px-16 z-10">
-  <div [ngClass]="{
-      'ml-auto text-right border-r-8 pr-8 md:pr-12 border-l-0': translocoService.getActiveLang() === 'ar', 
-      'mr-auto text-left border-l-8 pl-8 md:pl-12 border-r-0': translocoService.getActiveLang() === 'en'
-    }"
-    class="max-w-4xl border-[#FF8C00]">
-             
-    <h1 class="text-5xl md:text-8xl font-black text-white mb-6 uppercase tracking-tighter">
-      {{ slide.title }}
-    </h1>
-    
-    <p class="text-xl md:text-2xl text-gray-200 mb-12 font-light max-w-xl"
-       [ngClass]="{'ms-auto': translocoService.getActiveLang() === 'ar'}">
-      {{ slide.desc }}
-    </p>
+          <div class="container mx-auto px-6 md:px-16 z-10 h-full flex flex-col justify-end pb-40">
+            <div class="max-w-5xl" [ngClass]="{'ml-auto text-right': translocoService.getActiveLang() === 'ar'}">
+              
+             <p class="animate-fadeInDown text-xs uppercase tracking-[0.5em] font-bold text-[#14b8a6] mb-4">
+  {{ 'Featured Projects' }}
+</p>
 
-    <a [routerLink]="['/contact']"
-       class="inline-block bg-[#FF8C00] text-[#001030] px-12 py-4 font-black uppercase hover:bg-white transition-all duration-300 cursor-pointer relative z-50 text-center no-underline">
-      {{ 'nav.contact' | transloco }}
-    </a>
-  </div>
-</div>
-    </div>
-  </swiper-slide>
-</swiper-container>
+<h1 class="animate-fadeInUp text-7xl md:text-9xl font-black text-[#1e293b] leading-[0.9] tracking-tighter mb-8">
+  {{ slide.title }}
+</h1>
+
+<p class="animate-fadeInUp delay-200 text-lg md:text-xl font-medium text-[#475569] leading-relaxed italic max-w-2xl"
+   [ngClass]="{'ml-auto': translocoService.getActiveLang() === 'ar'}">
+   Innovative engineering and quality. Build with KAITECH.
+</p>
+
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
   </ng-container>
 </section>
-
 <app-about id="about"></app-about>
 <app-services id="services"></app-services>
 <app-projects id="projects"></app-projects>

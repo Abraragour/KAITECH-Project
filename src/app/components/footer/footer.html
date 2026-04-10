@@ -1,33 +1,24 @@
-<footer class="bg-[#000a1d] pt-20 pb-10 border-t border-white/5">
-  <div class="container mx-auto px-8 flex flex-col items-center">
+<footer class="bg-[#1e293b] py-16 border-t border-white/[0.05]" *transloco="let t">
+  <div class="container mx-auto px-8 flex flex-col items-center gap-10">
     
-    <div class="text-center mb-10">
-      <span class="text-4xl font-black text-white tracking-[0.2em] uppercase">KAITECH</span>
-      <div class="flex items-center justify-center gap-3 mt-3">
-        <div class="h-[1px] w-8 bg-[#FF8C00]/50"></div>
-        <p class="text-[#FF8C00] text-[10px] tracking-[0.4em] font-bold uppercase whitespace-nowrap">
-          Engineering Excellence
-        </p>
-        <div class="h-[1px] w-8 bg-[#FF8C00]/50"></div>
-      </div>
+    <div class="flex gap-12">
+      <a *ngFor="let social of socialLinks" 
+         [href]="social.link" 
+         class="text-slate-500 hover:text-[#14b8a6] transition-all duration-300 transform hover:-translate-y-1">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path [attr.d]="social.iconPath" />
+        </svg>
+      </a>
     </div>
 
-   <div class="flex gap-0 mb-12">
-  <a *ngFor="let social of socialLinks"
-     [href]="social.link"
-     target="_blank"
-     rel="noreferrer"
-     class="w-14 h-14 flex items-center justify-center border border-white/10 text-white transition-all duration-300 hover:bg-[#FF8C00] hover:text-[#000a1d] hover:border-[#FF8C00] cursor-pointer">
-    
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path [attr.d]="social.iconPath" />
-    </svg>
-  </a>
-</div>
-    <div class="w-full pt-8 border-t border-white/5 text-center">
-      <p class="text-gray-500 text-[10px] tracking-[0.2em] uppercase font-medium">
-        © {{ currentYear }} KAITECH. ALL RIGHTS RESERVED.
+    <div class="text-center space-y-2">
+      <p class="text-slate-500 text-[10px] tracking-[0.5em] uppercase font-black">
+        © {{ currentYear }} KAITECH
+      </p>
+      <p class="text-slate-600 text-[8px] tracking-[0.2em] uppercase">
+        Engineering Excellence • All Rights Reserved
       </p>
     </div>
+    
   </div>
 </footer>
