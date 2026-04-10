@@ -8,10 +8,25 @@
     "projects": "Projects",
     "contact": "Contact"
   },
-  "hero": [
-    { "title": "Engineering Excellence", "desc": "Leading construction solutions in Egypt.", "img": "slide1.webp" },
-    { "title": "Building the Future", "desc": "Innovative engineering and quality.", "img": "slide2.jpg" },
-    { "title": "Modern Infrastructure", "desc": "Highest safety and quality standards.", "img": "slide3.jpg" }
+"hero": [
+    { 
+      "featured": "Featured Projects",
+      "title": "Engineering Excellence", 
+      "desc": "Leading construction solutions in Egypt.", 
+      "img": "slide1.webp" 
+    },
+    { 
+      "featured": "Future Vision",
+      "title": "Building the Future", 
+      "desc": "Innovative engineering and quality.", 
+      "img": "slide2.jpg" 
+    },
+    { 
+      "featured": "Infrastructure",
+      "title": "Modern Infrastructure", 
+      "desc": "Highest safety and quality standards.", 
+      "img": "slide3.jpg" 
+    }
   ],
   "services": {
     "title": "Our Services",
@@ -52,6 +67,7 @@
   },
   "aboutPage": {
     "title": "About KAITECH",
+    "moreHistory": "More in our history",
     "readMore": "Read More",
     "subtitle": "Decades of Engineering Excellence",
     "story": "A leading construction and engineering firm dedicated to delivering transformative projects that serve communities with the highest safety and quality standards.",
