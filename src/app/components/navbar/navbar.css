@@ -1,4 +1,4 @@
-
+@reference "../../../styles.css";
 .nav-link {
   @apply relative text-[16px] uppercase tracking-[0.2em] font-black cursor-pointer inline-block;
   transition: color 0.5s ease;

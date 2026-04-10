@@ -1,22 +1,51 @@
 <footer class="bg-[#1e293b] py-16 border-t border-white/[0.05]" *transloco="let t">
-  <div class="container mx-auto px-8 flex flex-col items-center gap-10">
+  <div class="container mx-auto px-8 flex flex-col items-center gap-12">
     
-    <div class="flex gap-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-4xl">
+      
+      <div class="flex flex-col items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#14b8a6] transition-all duration-500">
+          <lucide-icon [img]="PhoneIcon" class="w-5 h-5 text-[#14b8a6] group-hover:text-white"></lucide-icon>
+        </div>
+        <span class="text-slate-400 text-[10px] tracking-widest uppercase font-bold">{{ t('footer.contactInfo.egypt') }}</span>
+        <a href="tel:+201002364467" dir="ltr" class="text-white text-sm font-black tracking-wider hover:text-[#14b8a6] transition-colors">
+          +20 100 236 4467
+        </a>
+      </div>
+
+      <div class="flex flex-col items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#14b8a6] transition-all duration-500">
+          <lucide-icon [img]="MailIcon" class="w-5 h-5 text-[#14b8a6] group-hover:text-white"></lucide-icon>
+        </div>
+        <span class="text-slate-400 text-[10px] tracking-widest uppercase font-bold">{{ t('footer.contactInfo.email') }}</span>
+        <a href="mailto:info@kaitech-eg.com" class="text-white text-sm font-black tracking-wider hover:text-[#14b8a6] transition-colors">
+          info@kaitech-eg.com
+        </a>
+      </div>
+
+      <div class="flex flex-col items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#14b8a6] transition-all duration-500">
+          <lucide-icon [img]="PhoneIcon" class="w-5 h-5 text-[#14b8a6] group-hover:text-white"></lucide-icon>
+        </div>
+        <span class="text-slate-400 text-[10px] tracking-widest uppercase font-bold">{{ t('footer.contactInfo.ksa') }}</span>
+        <a href="tel:+966561300817" dir="ltr" class="text-white text-sm font-black tracking-wider hover:text-[#14b8a6] transition-colors">
+          +966 56 130 0817
+        </a>
+      </div>
+    </div>
+
+    <div class="flex gap-8">
       <a *ngFor="let social of socialLinks" 
          [href]="social.link" 
-         class="text-slate-500 hover:text-[#14b8a6] transition-all duration-300 transform hover:-translate-y-1">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-          <path [attr.d]="social.iconPath" />
-        </svg>
+         target="_blank"
+         class="p-3 rounded-xl bg-white/[0.02] text-slate-500 hover:text-white hover:bg-[#14b8a6] transition-all duration-500 transform hover:-translate-y-2">
+        <lucide-icon [img]="social.icon" class="w-5 h-5"></lucide-icon>
       </a>
     </div>
 
-    <div class="text-center space-y-2">
-      <p class="text-slate-500 text-[10px] tracking-[0.5em] uppercase font-black">
-        © {{ currentYear }} KAITECH
-      </p>
-      <p class="text-slate-600 text-[8px] tracking-[0.2em] uppercase">
-        Engineering Excellence • All Rights Reserved
+    <div class="text-center pt-4 border-t border-white/5 w-full max-w-xs">
+      <p class="text-slate-500 text-[9px] tracking-[0.4em] uppercase font-bold leading-relaxed">
+        {{ t('footer.rights') }}
       </p>
     </div>
     

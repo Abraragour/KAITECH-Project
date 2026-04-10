@@ -178,8 +178,15 @@
       "address_val": "Cairo, Egypt"
     }
   },
-  "footer": "© 2026 KAITECH Engineering. All Rights Reserved.",
-  "serviceDetails": {
+"footer": {
+    "rights": "All Rights Reserved © 2026 KAITECH",
+    "excellence": "Engineering Excellence • Global Standards",
+    "contactInfo": {
+      "egypt": "Egypt Office",
+      "ksa": "KSA Office",
+      "email": "Email Address"
+    }
+  },  "serviceDetails": {
     "impactTitle": "SERVICE IMPACT",
     "impactDesc": "We provide high-end solutions for {{serviceName}} tailored specifically for your engineering needs."
   }
