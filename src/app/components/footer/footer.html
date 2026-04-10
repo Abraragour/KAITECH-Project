@@ -1,53 +1,81 @@
 <footer class="bg-[#1e293b] py-16 border-t border-white/[0.05]" *transloco="let t">
-  <div class="container mx-auto px-8 flex flex-col items-center gap-12">
+  <div class="container mx-auto px-8">
     
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-4xl">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-right" [dir]="t('lang') === 'ar' ? 'rtl' : 'ltr'">
       
-      <div class="flex flex-col items-center gap-3 group">
-        <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#14b8a6] transition-all duration-500">
-          <lucide-icon [img]="PhoneIcon" class="w-5 h-5 text-[#14b8a6] group-hover:text-white"></lucide-icon>
+      <div class="space-y-6 flex flex-col items-center md:items-end">
+        <div class="w-full">
+          <h2 class="text-[#14b8a6] text-xl font-black tracking-tight mb-2">KAITECH Academy</h2>
+          <p class="text-slate-400 text-xs italic leading-relaxed">{{ t('footer.followUs') }}</p>
         </div>
-        <span class="text-slate-400 text-[10px] tracking-widest uppercase font-bold">{{ t('footer.contactInfo.egypt') }}</span>
-        <a href="tel:+201002364467" dir="ltr" class="text-white text-sm font-black tracking-wider hover:text-[#14b8a6] transition-colors">
-          +20 100 236 4467
-        </a>
+        
+        <div class="space-y-3 pt-2 w-full">
+          <h3 class="text-white text-[10px] uppercase tracking-[0.3em] font-bold">{{ t('footer.findUs') }}</h3>
+          <div class="flex gap-3 justify-center md:justify-end flex-wrap">
+            <a *ngFor="let social of socialLinks" 
+               [href]="social.link" 
+               target="_blank"
+               class="w-10 h-10 rounded-xl bg-white/[0.03] flex items-center justify-center text-[#14b8a6] hover:bg-[#14b8a6] hover:text-white transition-all duration-500 transform hover:-translate-y-1">
+              
+<ng-container *ngIf="$any(social).name === 'whatsapp'; else otherIcon">                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.4-8.6-44.6-27.5-16.5-14.7-27.6-32.8-30.8-38.4-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.5-9.2 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
+                </svg>
+              </ng-container>
+
+              <ng-template #otherIcon>
+<lucide-icon [img]="$any(social.icon)" class="w-5 h-5"></lucide-icon>              </ng-template>
+            </a>
+          </div>
+        </div>
       </div>
 
-      <div class="flex flex-col items-center gap-3 group">
-        <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#14b8a6] transition-all duration-500">
-          <lucide-icon [img]="MailIcon" class="w-5 h-5 text-[#14b8a6] group-hover:text-white"></lucide-icon>
+      <div class="space-y-6 flex flex-col items-center md:items-end">
+        <h3 class="text-white text-[10px] uppercase tracking-[0.3em] font-bold pb-2 border-b border-white/5 w-1/2 md:w-full">
+           {{ t('footer.contactTitle') }}
+        </h3>
+        
+        <div class="space-y-4 w-full">
+          <div class="flex items-center gap-4 justify-center md:justify-end group">
+            <a href="mailto:info@kaitech-solutions.com" class="text-slate-300 hover:text-[#14b8a6] transition-colors text-xs font-medium tracking-wide">
+              info@kaitech-solutions.com
+            </a>
+            <div class="w-9 h-9 rounded-full bg-white/[0.03] flex items-center justify-center text-[#14b8a6]">
+              <lucide-icon [img]="MailIcon" class="w-4 h-4"></lucide-icon>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 justify-center md:justify-end group">
+            <a href="tel:+201065587728" class="text-slate-300 hover:text-[#14b8a6] transition-colors text-xs font-medium tracking-wide" dir="ltr">
+              +20 106 558 7728
+            </a>
+            <div class="w-9 h-9 rounded-full bg-white/[0.03] flex items-center justify-center text-[#14b8a6]">
+              <lucide-icon [img]="PhoneIcon" class="w-4 h-4"></lucide-icon>
+            </div>
+          </div>
         </div>
-        <span class="text-slate-400 text-[10px] tracking-widest uppercase font-bold">{{ t('footer.contactInfo.email') }}</span>
-        <a href="mailto:info@kaitech-eg.com" class="text-white text-sm font-black tracking-wider hover:text-[#14b8a6] transition-colors">
-          info@kaitech-eg.com
-        </a>
       </div>
 
-      <div class="flex flex-col items-center gap-3 group">
-        <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#14b8a6] transition-all duration-500">
-          <lucide-icon [img]="PhoneIcon" class="w-5 h-5 text-[#14b8a6] group-hover:text-white"></lucide-icon>
+      <div class="space-y-6 flex flex-col items-center md:items-end">
+        <h3 class="text-white text-[10px] uppercase tracking-[0.3em] font-bold pb-2 border-b border-white/5 w-1/2 md:w-full">
+           {{ t('footer.locationTitle') }}
+        </h3>
+        <div class="flex flex-col items-center md:items-end w-full">
+          <p class="text-slate-400 text-xs leading-relaxed mb-3 text-center md:text-right max-w-[250px]">
+            {{ t('footer.address_val') }}
+          </p>
+          <a href="https://goo.gl/maps/1Qg19dUhYj9VYG5FA" target="_blank" class="text-[#14b8a6] text-[9px] uppercase font-black tracking-widest hover:underline flex items-center gap-2">
+            {{ t('footer.viewMap') }}
+            <lucide-icon [img]="MapPinIcon" class="w-3.5 h-3.5"></lucide-icon>
+          </a>
         </div>
-        <span class="text-slate-400 text-[10px] tracking-widest uppercase font-bold">{{ t('footer.contactInfo.ksa') }}</span>
-        <a href="tel:+966561300817" dir="ltr" class="text-white text-sm font-black tracking-wider hover:text-[#14b8a6] transition-colors">
-          +966 56 130 0817
-        </a>
       </div>
+
     </div>
 
-    <div class="flex gap-8">
-      <a *ngFor="let social of socialLinks" 
-         [href]="social.link" 
-         target="_blank"
-         class="p-3 rounded-xl bg-white/[0.02] text-slate-500 hover:text-white hover:bg-[#14b8a6] transition-all duration-500 transform hover:-translate-y-2">
-        <lucide-icon [img]="social.icon" class="w-5 h-5"></lucide-icon>
-      </a>
-    </div>
-
-    <div class="text-center pt-4 border-t border-white/5 w-full max-w-xs">
-      <p class="text-slate-500 text-[9px] tracking-[0.4em] uppercase font-bold leading-relaxed">
-        {{ t('footer.rights') }}
+    <div class="mt-16 pt-8 border-t border-white/[0.03] text-center">
+      <p class="text-slate-600 text-[9px] tracking-[0.5em] uppercase font-bold">
+        © 2026 KAITECH ENGINEERING • {{ t('footer.rights') }}
       </p>
     </div>
-    
   </div>
 </footer>

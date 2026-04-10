@@ -179,14 +179,13 @@
     }
   },
 "footer": {
-    "rights": "All Rights Reserved © 2026 KAITECH",
-    "excellence": "Engineering Excellence • Global Standards",
-    "contactInfo": {
-      "egypt": "Egypt Office",
-      "ksa": "KSA Office",
-      "email": "Email Address"
-    }
-  },  "serviceDetails": {
+  "followUs": "Kindly keep following us through our social media channels",
+  "findUs": "Find Us On",
+  "contactTitle": "Contact Us","address_val": "15 Said Zakaria Street, Al Manteqah Ath Thamenah, Nasr City, Cairo",
+  "locationTitle": "Our Location",
+  "viewMap": "View on Maps",
+  "rights": "All Rights Reserved"
+},  "serviceDetails": {
     "impactTitle": "SERVICE IMPACT",
     "impactDesc": "We provide high-end solutions for {{serviceName}} tailored specifically for your engineering needs."
   }
