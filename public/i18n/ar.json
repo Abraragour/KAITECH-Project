@@ -8,26 +8,26 @@
     "projects": "مشاريعنا",
     "contact": "تواصل معنا"
   },
-  "hero": [
-    { 
-      "featured": "مشاريع مميزة",
-      "title": "تميز هندسي", 
-      "desc": "حلول إنشائية رائدة في مصر.", 
-      "img": "slide1.webp" 
-    },
-    { 
-      "featured": "رؤية مستقبلية",
-      "title": "بناء المستقبل", 
-      "desc": "هندسة ابتكارية وجودة لا تضاهى.", 
-      "img": "slide2.jpg" 
-    },
-    { 
-      "featured": "بنية تحتية",
-      "title": "بنية تحتية حديثة", 
-      "desc": "أعلى معايير السلامة والجودة.", 
-      "img": "slide3.jpg" 
-    }
-  ],
+"hero": [
+  { 
+    "featured": "مشاريع رائدة",
+    "title": "التحول الرقمي في الهندسة", 
+    "desc": "نحن نعيد صياغة صناعة التشييد من خلال حلول BIM والتوأم الرقمي المبتكرة.", 
+    "img": "slide1.webp" 
+  },
+  { 
+    "featured": "رؤية عالمية",
+    "title": "دقة التصميم، ذكاء التنفيذ", 
+    "desc": "نضمن أعلى معايير الجودة العالمية ISO في إدارة المشاريع الهندسية الكبرى.", 
+    "img": "slide2.jpg" 
+  },
+  { 
+    "featured": "مدن المستقبل",
+    "title": "بنية تحتية رقمية ذكية", 
+    "desc": "تطوير حلول GIS وأنظمة ذكاء الإنشاءات لتعزيز استدامة وكفاءة الأصول.", 
+    "img": "slide3.jpg" 
+  }
+],
 "services": {
   "title": "خدماتنا",
   "subtitle": "حلول رقمية متكاملة لصناعة الإنشاءات",
@@ -106,16 +106,54 @@
     }
   ]
 },
-  "projects": {
-    "title": "مشاريعنا",
-    "subtitle": "مخططنا للمستقبل",
-    "filters": { "all": "الكل", "construction": "إنشاءات", "infra": "بنية تحتية", "energy": "طاقة" },
-    "items": [
-      { "id": "1", "title": "مجمع الشروق السكني", "category": "construction", "img": "project1.jpg" },
-      { "id": "2", "title": "محطة طاقة الرياح", "category": "energy", "img": "project2.jpg" },
-      { "id": "3", "title": "شبكة مياه القاهرة", "category": "infra", "img": "project3.jpg" }
-    ]
+"projects": {
+  "title": "مشاريعنا",
+  "subtitle": "سجل حافل من التميز الرقمي",
+  "filters": { 
+    "all": "الكل", 
+    "healthcare": "الرعاية الصحية", 
+    "commercial": "تجاري وإداري", 
+    "industrial": "صناعي" 
   },
+  "items": [
+    { 
+      "id": "1", 
+      "title": "مصنع EIPICO 3 للأدوية", 
+      "category": "healthcare", 
+      "img": "project1.jpg" 
+    },
+    { 
+      "id": "2", 
+      "title": "برج The Point - السعودية", 
+      "category": "commercial", 
+      "img": "project2.jpg" 
+    },
+    { 
+      "id": "3", 
+      "title": "المبنى الإداري لشركة مراكز", 
+      "category": "commercial", 
+      "img": "project3.jpg" 
+    },
+    { 
+      "id": "4", 
+      "title": "مستشفى تبارك للأطفال", 
+      "category": "healthcare", 
+      "img": "slide1.webp" 
+    },
+    { 
+      "id": "5", 
+      "title": "محطة توليد كهرباء جنوب حلوان", 
+      "category": "industrial", 
+      "img": "slide2.jpg" 
+    },
+    { 
+      "id": "6", 
+      "title": "مول O-West الإداري", 
+      "category": "commercial", 
+      "img": "slide3.jpg" 
+    }
+  ]
+},
   "projectDetails": {
     "overview": "نظرة عامة على المشروع",
     "description": "تم تنفيذ مشروع {{projectName}} بأعلى معايير الجودة العالمية لضمان الاستدامة والكفاءة."

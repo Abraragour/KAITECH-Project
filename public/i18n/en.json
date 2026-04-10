@@ -9,25 +9,25 @@
     "contact": "Contact"
   },
 "hero": [
-    { 
-      "featured": "Featured Projects",
-      "title": "Engineering Excellence", 
-      "desc": "Leading construction solutions in Egypt.", 
-      "img": "slide1.webp" 
-    },
-    { 
-      "featured": "Future Vision",
-      "title": "Building the Future", 
-      "desc": "Innovative engineering and quality.", 
-      "img": "slide2.jpg" 
-    },
-    { 
-      "featured": "Infrastructure",
-      "title": "Modern Infrastructure", 
-      "desc": "Highest safety and quality standards.", 
-      "img": "slide3.jpg" 
-    }
-  ],
+  { 
+    "featured": "Premier Projects",
+    "title": "Engineering Digital Transformation", 
+    "desc": "Redefining the construction industry through innovative BIM and Digital Twin solutions.", 
+    "img": "slide1.webp" 
+  },
+  { 
+    "featured": "Global Vision",
+    "title": "Precision Design, Smart Execution", 
+    "desc": "Ensuring world-class ISO standards in the management of mega engineering projects.", 
+    "img": "slide2.jpg" 
+  },
+  { 
+    "featured": "Future Cities",
+    "title": "Smart Digital Infrastructure", 
+    "desc": "Developing GIS solutions and Construction Intelligence to enhance asset sustainability.", 
+    "img": "slide3.jpg" 
+  }
+],
  "services": {
   "title": "Our Services",
   "subtitle": "Integrated Digital Solutions for the Construction Industry",
@@ -115,16 +115,54 @@
     }
   ]
 },
-  "projects": {
-    "title": "Our Projects",
-    "subtitle": "Our Blueprint for the Future",
-    "filters": { "all": "All", "construction": "Construction", "infra": "Infrastructure", "energy": "Energy" },
-    "items": [
-      { "id": "1", "title": "Shorouk Housing Complex", "category": "construction", "img": "project1.jpg" },
-      { "id": "2", "title": "Wind Energy Station", "category": "energy", "img": "project2.jpg" },
-      { "id": "3", "title": "Cairo Water Network", "category": "infra", "img": "project3.jpg" }
-    ]
+ "projects": {
+  "title": "Our Projects",
+  "subtitle": "A Proven Track Record of Excellence",
+  "filters": { 
+    "all": "All", 
+    "healthcare": "Healthcare", 
+    "commercial": "Commercial", 
+    "industrial": "Industrial" 
   },
+  "items": [
+    { 
+      "id": "1", 
+      "title": "EIPICO 3 Pharma Factory", 
+      "category": "healthcare", 
+      "img": "project1.jpg" 
+    },
+    { 
+      "id": "2", 
+      "title": "The Point Tower - KSA", 
+      "category": "commercial", 
+      "img": "project2.jpg" 
+    },
+    { 
+      "id": "3", 
+      "title": "Marakez Head Office", 
+      "category": "commercial", 
+      "img": "project3.jpg" 
+    },
+    { 
+      "id": "4", 
+      "title": "Tabarak Children's Hospital", 
+      "category": "healthcare", 
+      "img": "slide1.webp" 
+    },
+    { 
+      "id": "5", 
+      "title": "South Helwan Power Plant", 
+      "category": "industrial", 
+      "img": "slide2.jpg" 
+    },
+    { 
+      "id": "6", 
+      "title": "O-West Business Hub", 
+      "category": "commercial", 
+      "img": "slide3.jpg" 
+    }
+  ]
+},
   "projectDetails": {
     "overview": "Project Overview",
     "description": "The {{projectName}} project was executed with the highest global quality standards to ensure sustainability and efficiency."
