@@ -14,7 +14,6 @@ export class FooterComponent {
   readonly MapPinIcon = MapPin;
   readonly PhoneIcon = Phone;
 
-  // ضفنا name لكل أوبجكت عشان الـ HTML يعرف يفرق بين الواتساب والباقي
   socialLinks = [
     { name: 'facebook', link: 'https://www.facebook.com/KAITECH1/', icon: Facebook },
     { name: 'linkedin', link: 'https://www.linkedin.com/company/kaitech-engineering/', icon: Linkedin },

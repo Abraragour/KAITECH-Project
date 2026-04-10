@@ -41,8 +41,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.translocoService.langChanges$.subscribe(lang => {
       const isAr = lang === 'ar';
-      this.titleService.setTitle(isAr ? 'كايتك | الرئيسية - تميز هندسي' : 'KAITECH | Home - Engineering Excellence');
-      
+this.titleService.setTitle(isAr ? 'كايتك | الصفحة الرئيسية' : 'KAITECH | Home Page');      
       const desc = isAr ? 'حلول هندسية رائدة' : 'Leading construction solutions';
       this.metaService.updateTag({ name: 'description', content: desc });
       

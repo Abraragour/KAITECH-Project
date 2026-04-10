@@ -1,22 +1,24 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
+import { Title } from '@angular/platform-browser';
 
-import {  ContactComponent } from './contact';
+@Component({
+  selector: 'app-contact',
+  standalone: true, 
+  imports: [CommonModule, TranslocoModule], 
+  templateUrl: './contact.html',
+  styleUrl: './contact.css',
+})
+export class ContactComponent implements OnInit {
 
-describe('Contact', () => {
-  let component: ContactComponent;
-  let fixture: ComponentFixture<ContactComponent>;
+  constructor(
+    private titleService: Title,
+    private translocoService: TranslocoService
+  ) {}
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [ContactComponent],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(ContactComponent);
-    component = fixture.componentInstance;
-    await fixture.whenStable();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  ngOnInit() {
+    const isAr = this.translocoService.getActiveLang() === 'ar';
+    this.titleService.setTitle(isAr ? 'كايتك | اتصل بنا' : 'KAITECH | Contact Us');
+  }
+}

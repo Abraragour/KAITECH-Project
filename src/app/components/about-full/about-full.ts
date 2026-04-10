@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslocoModule } from '@ngneat/transloco';
+import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about-full',
@@ -9,4 +10,16 @@ import { TranslocoModule } from '@ngneat/transloco';
   templateUrl: './about-full.html',
   styleUrl: './about-full.css',
 })
-export class AboutFullComponent { } 
+export class AboutFullComponent implements OnInit {
+
+  constructor(
+    private titleService: Title,
+    private translocoService: TranslocoService
+  ) {}
+
+  ngOnInit() {
+    const isAr = this.translocoService.getActiveLang() === 'ar';
+    
+    this.titleService.setTitle(isAr ? 'كايتك | من نحن' : 'KAITECH | About Us');
+  }
+}

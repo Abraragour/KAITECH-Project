@@ -11,7 +11,7 @@ export const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      { path: 'about-full', component: AboutFullComponent }, // 👈 الصفحة الجديدة هنا
+      { path: 'about-full', component: AboutFullComponent }, 
       { path: '', component: HomeComponent },
       { path: 'service/:id', component: ServiceDetailsComponent },
       { path: 'project/:id', component: ProjectDetailsComponent },

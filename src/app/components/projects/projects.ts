@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
 import { take } from 'rxjs';
 import { RouterModule } from '@angular/router'; 
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-projects',
@@ -17,7 +18,8 @@ export class ProjectsComponent implements OnInit {
 
   constructor(
     private transloco: TranslocoService,
-    private cdr: ChangeDetectorRef 
+    private cdr: ChangeDetectorRef,
+    private titleService: Title
   ) {}
 
   ngOnInit() {
@@ -25,6 +27,8 @@ export class ProjectsComponent implements OnInit {
     this.transloco.selectTranslation().pipe(take(1)).subscribe(() => {
       this.cdr.detectChanges();
     });
+    const isAr = this.transloco.getActiveLang() === 'ar';
+    this.titleService.setTitle(isAr ? 'كايتك | المشاريع' : 'KAITECH | Projects');
   }
 
   showMore() {

@@ -1,7 +1,8 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
 import { RouterLink } from '@angular/router'; 
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-services',
@@ -10,13 +11,19 @@ import { RouterLink } from '@angular/router';
   templateUrl: './services.html',
   styleUrl: './services.css'
 })
-export class ServicesComponent {
+export class ServicesComponent implements OnInit {
   visibleServicesCount: number = 6;
 
   constructor(
     private transloco: TranslocoService,
-    private cdr: ChangeDetectorRef 
+    private cdr: ChangeDetectorRef,
+    private titleService: Title
   ) {}
+
+  ngOnInit() {
+    const isAr = this.transloco.getActiveLang() === 'ar';
+    this.titleService.setTitle(isAr ? 'كايتك | الخدمات' : 'KAITECH | Services');
+  }
 
   showMore() {
     this.visibleServicesCount += 3;
